@@ -14,4 +14,4 @@ function dividir(numUm, numDois){
     return numUm / numDois
 }
 
-module.exports = {somar, subtrair, multiplicar, dividir}
+module.exports = {somar, subtrair, multiplicar, dividir} // Exportando todas as funções caso alguém queira
