@@ -90,6 +90,22 @@ async function postDataList(listaCarro){
     
 }
 
+async function patchData(url = "https://apigenerator.dronahq.com/api/iWLFaLfc/Carros", newData = {}, id){
+    const response = await fetch(url = url + `/${id}`, {
+        method : "PATCH",
+        mode : "cors",
+        cache : "no-cache",
+        credentials: 'same-origin',
+        headers: {
+        'Content-Type': 'application/json'
+        },
+        redirect: 'follow',
+        referrerPolicy: 'no-referrer',
+        body: JSON.stringify(newData)
+    });
+    return response.json();
+} 
+
 let carros = []
 carros.push(new Carro ("Honda", "Civic", "Sedan", "2021", 0, 119298))
 carros.push(new Carro ("Jepp", "Compass Sport 1.3", "SUV", "2023", 0, 178590))
